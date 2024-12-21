@@ -1,0 +1,35 @@
+.toggle-button {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 50px;
+
+  &:hover {
+    background-color: #bbb;
+  }
+
+  .toggle-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+
+    &.active {
+      transform: translateX(40px);
+    }
+  }
+
+  .toggle-label {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+}
