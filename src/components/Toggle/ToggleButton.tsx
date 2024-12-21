@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import "./ToggleButton.scss";
 
-const ToggleButton: React.FC = () => {
+interface ToggleButtonProps {
+  toggleDarkTheme: () => void;
+}
+
+const ToggleButton: React.FC<ToggleButtonProps> = ({ toggleDarkTheme }) => {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
+    toggleDarkTheme();
   };
 
   return (
